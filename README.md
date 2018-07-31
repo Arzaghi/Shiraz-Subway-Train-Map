@@ -1,7 +1,13 @@
+<h3>Demo</h3>
+http://hamidrezaarzaghi.zili.ir
+
 <h3>
   Motivation
 </h3>
-Shiraz subway train map is my first ReactJs application which I created just for the learning purposes. it is currently available online at: http://hamidrezaarzaghi.zili.ir
+Shiraz subway train map is my first ReactJs application which I created just for the learning purposes.
+
+<h4>Static Pages Branch</h4>
+This branch is optimized and tuned for use in mobile app wrapping technologies such as Apache Cordova, Ionic or PhoneGap.
 
 <h3>How to run?</h3>
 To execute the application just navigate to the root directory of project using command propmt and run the following commands respectively:

@@ -37,8 +37,8 @@ const styles = theme => ({
     }),
   },
   menuButton: {
-    marginLeft: 12,
-    marginRight: 20,
+    marginLeft: 5,
+    marginRight: 4,
   },
   hide: {
     display: 'none',

@@ -5,9 +5,9 @@ import Texts from '../Data/Texts'
 import MyTheme from './MyTheme'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import { ListOfStations } from './DrawerListContents'
-import { Switch, Route } from 'react-router-dom'
+import { createHashHistory } from 'history'
+import { Router, Route } from "react-router";
 import Station from './Station'
-import NotFound from './NotFound'
 import FullMap from './FullMap';
 
 class App extends Component {
@@ -19,9 +19,6 @@ class App extends Component {
     }
     setInterval(this.refreshTime, 1000);
   }
-
-
-
 
   getCurrentTime = () => {
     var d = new Date(); // for now
@@ -50,12 +47,16 @@ class App extends Component {
             title={Texts.HeaderTitle}
             mainContents={
               <Fragment>
-                <Switch>
-                  <Route exact path='/' render={(props) => <FullMap {...props} currentTime={this.state.currentTime} />} />
-                  <Route exact path='/station/:ID' render={(props) => <Station {...props} currentTime={this.state.currentTime} />} />
-                  <Route path='/map' render={(props) => <FullMap {...props} currentTime={this.state.currentTime} />} />
-                  <Route path='*' component={NotFound} />
-                </Switch>                                                
+
+                <Router history={createHashHistory()}>
+
+                  <div>
+                    <Route exact path="/" render={(props) => <FullMap {...props} currentTime={this.state.currentTime} />} />
+                    <Route path='/station/:ID' render={(props) => <Station {...props} currentTime={this.state.currentTime} />} />
+                    <Route path='/map' render={(props) => <FullMap {...props} currentTime={this.state.currentTime} />} />                    
+                  </div>
+
+                </Router>
               </Fragment>
             }
           />
