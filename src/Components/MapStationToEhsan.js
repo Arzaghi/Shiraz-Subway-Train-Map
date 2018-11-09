@@ -75,7 +75,7 @@ function MapStationToEhsan(props) {
             </Link>
 
             {
-                station.StationID !== '16' ?
+                station.StationID !== '18' ?
                     <div className={classes.root} >
                         <Slider
                             trackStyle={{ backgroundColor: MyTheme.palette.grey["300"] }}
