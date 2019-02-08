@@ -37,8 +37,8 @@ const styles = theme => ({
     }),
   },
   menuButton: {
-    marginLeft: 12,
-    marginRight: 20,
+    marginLeft: 0,
+    marginRight: 0,
   },
   hide: {
     display: 'none',
@@ -47,7 +47,7 @@ const styles = theme => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
-    padding: '0 8px',
+    padding: '0 0px',
     ...theme.mixins.toolbar,
   },
   content: {
@@ -63,7 +63,7 @@ const styles = theme => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
-    padding: '0px 4px',
+    padding: '0px 8px',
     width: '100%',
   },
   'contentShift-right': {

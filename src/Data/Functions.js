@@ -13,13 +13,13 @@ export function CompareTime(time1, time2) {
 export function CalcNextTrainTime(StationSchedule, direction, currentTime) {
 
     let nextTrainTime = StationSchedule[(direction === 'east' ? 'ToDastgheib' : 'ToEhsan')].filter(w =>
-        CompareTime(w + ':00', currentTime) >= -30
+        CompareTime(w , currentTime) >= -20
     )[0]
 
 
     if (nextTrainTime !== undefined) {
         let difSeconds = CompareTime(
-            nextTrainTime + ':00', currentTime);
+            nextTrainTime , currentTime);
         if (difSeconds > 1800) {
             return 'ساعت ' + StationSchedule[(direction === 'east' ? 'ToDastgheib' : 'ToEhsan')][0];
         }
